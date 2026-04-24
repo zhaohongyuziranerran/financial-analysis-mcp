@@ -1,0 +1,15 @@
+name: financial-analysis-mcp
+version: 1.0
+description: "Financial intelligence MCP Server covering A-shares, HK, US stocks, funds, futures, macro, forex, commodities. 209 data APIs + AI analysis."
+runtime: python
+main: src/fin_analysis_mcp/__main__.py
+
+pricing:
+  model: free
+
+deploy:
+  region: auto
+  memory: 512
+  timeout: 30
+
+visibility: public
