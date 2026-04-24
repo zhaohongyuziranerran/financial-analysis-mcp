@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "fin-analysis-mcp-local": {
+      "command": "python",
+      "args": ["-m", "fin_analysis_mcp"],
+      "env": {
+        "NEODATA_TOKEN": ""
+      }
+    },
+    "fin-analysis-mcp-remote": {
+      "url": "http://111.229.32.174:9001/finmcp"
+    }
+  }
+}
