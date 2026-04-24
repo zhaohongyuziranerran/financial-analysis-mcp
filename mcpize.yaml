@@ -1,15 +1,15 @@
 name: financial-analysis-mcp
 version: 1.0
-description: "Financial intelligence MCP Server covering A-shares, HK, US stocks, funds, futures, macro, forex, commodities. 209 data APIs + AI analysis."
+description: |
+  金融智能分析MCP Server - 覆盖A股/港股/美股/基金/期货/宏观/外汇/大宗商品
+  基于NeoData 209个金融数据接口 + AI智能分析层
+  13个工具：个股分析/多股对比/市场概览/财报分析/基金分析/板块分析/宏观经济/资金流向/涨跌停/智能选股/自然语言查询/结构化API查询/外汇商品
 runtime: python
-main: src/fin_analysis_mcp/__main__.py
+main: server.py
 
 pricing:
   model: free
 
 deploy:
-  region: auto
-  memory: 512
-  timeout: 30
-
-visibility: public
+  memory: 1024
+  timeout: 60
