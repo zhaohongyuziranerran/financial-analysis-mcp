@@ -1,0 +1,43 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "fin-analysis-mcp"
+version = "1.0.0"
+description = "金融智能分析MCP Server - 覆盖A股/港股/美股/基金/期货/宏观/外汇/大宗商品，209个数据接口+AI分析"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+authors = [
+    { name = "ai-expert-skills" },
+]
+keywords = ["mcp", "finance", "stock", "fund", "analysis", "neodata", "ai"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Financial and Insurance Industry",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Office/Business :: Financial :: Investment",
+]
+dependencies = [
+    "fastmcp>=2.2.0",
+    "httpx>=0.27.0",
+    "pydantic>=2.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "pytest-asyncio>=0.23",
+]
+
+[project.scripts]
+fin-analysis-mcp = "fin_analysis_mcp.server:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/fin_analysis_mcp"]
