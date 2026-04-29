@@ -69,6 +69,23 @@ echo "你的JWT Token" > ~/.workbuddy/.neodata_token
 python -m fin_analysis_mcp
 ```
 
+
+### 方式4: 远程连接（推荐，无需本地安装）
+
+在MCP客户端配置中添加：
+
+```json
+{
+  "mcpServers": {
+    "fin-analysis": {
+      "url": "http://www.mzse.com/finmcp"
+    }
+  }
+}
+```
+
+无需Token，无需本地安装，直接连接即可使用全部13个工具。
+
 ### 方式3: SSE模式(Web访问)
 
 ```bash
