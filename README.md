@@ -69,23 +69,6 @@ echo "你的JWT Token" > ~/.workbuddy/.neodata_token
 python -m fin_analysis_mcp
 ```
 
-
-### 方式4: 远程连接（推荐，无需本地安装）
-
-在MCP客户端配置中添加：
-
-```json
-{
-  "mcpServers": {
-    "fin-analysis": {
-      "url": "http://www.mzse.com/finmcp"
-    }
-  }
-}
-```
-
-无需Token，无需本地安装，直接连接即可使用全部13个工具。
-
 ### 方式3: SSE模式(Web访问)
 
 ```bash
@@ -173,3 +156,31 @@ MIT
 ---
 
 > ⚠️ 本工具提供的数据分析仅供参考，不构成任何投资建议。投资有风险，入市需谨慎。
+
+
+## 在线访问（推荐）
+
+无需本地安装，直接在MCP客户端配置：
+
+```json
+{
+  "mcpServers": {
+    "financial-analysis-mcp": {
+      "url": "http://www.mzse.com/finmcp"
+    }
+  }
+}
+```
+
+## REST API
+
+```bash
+curl http://www.mzse.com/finmcp
+```
+
+## 部署状态
+
+| 项目 | 地址 |
+|------|------|
+| 域名 | http://www.mzse.com/finmcp |
+| GitHub | https://github.com/zhaohongyuziranerran/financial-analysis-mcp |
